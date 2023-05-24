@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rancho Mirage CSS Kiosk</title>
+    <style>
+        body {
+          font-family: Arial;
+          color: white;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .split {
+          height: 100%;
+          width: 50%;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          overflow-x: hidden;
+          padding-top: 20px;
+        }
+        
+        .left {
+          left: 0;
+          background-color: blue;
+        }
+        
+        .right {
+          right: 0;
+          background-color: red;
+        }
+        
+        .centered {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          border: 3px solid black;
+          border-radius: 10px;
+          padding: 50px;
+          background-color: white;
+          color: black
+        }
+        
+        .centered img {
+          width: 150px;
+          border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+  <div class="split left">
+    <a href="https://ranchomirageca-energovweb.tylerhost.net/apps/selfservice#/home">
+        <div class="centered">   
+        <h2>Citizen Self Service</h2>
+        <p>Click here to fill out or track a permit, plan, or license.</p>
+        </div>
+    </a>
+    </div>    
+    <div class="split right">
+    <a href="https://ranchomirageca.justfoia.com/publicportal/home/newrequest">
+        <div class="centered">
+        <h2>Public Record Request</h2>
+        <p>Click here to fill out or track a public record request.</p>
+        </div>
+    </a>
+    </div>            
+</body>
+</html>

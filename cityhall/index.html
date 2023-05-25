@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RM Kiosk Config</title>
+    <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
+</head>
+<style>
+    body {
+        background-color: black;
+        color: white;
+        width: 100%;
+        overflow: hidden;
+        margin: auto;
+    }
+    div {
+        font-size: 1.6rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+    }
+    img {
+        position: absolute;
+        display: inline;
+        width: 200px;
+        top: 2vh;
+        left: 1.5vw;
+    }
+</style>
+<body>
+    <a href="https://ranchomirageca.gov/"><img src="logo.png"></a>
+    <div id="app"></div>
+</body>
+<script>
+
+    var app = document.getElementById('app');
+
+    var typewriter = new Typewriter(app, {
+        loop: false
+    });
+
+    typewriter
+        .typeString('Redirecting...')
+        .start();
+
+    setTimeout(function () {
+        window.location.href = "https://ranchomirageca.gov"; //will redirect to your page
+        }, 3500); //will call the function after 3.5 secs.
+
+</script>
+</html>

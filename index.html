@@ -4,67 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RNLO Kiosk Config</title>
-    <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
+    <title>Rancho Mirage Kiosk</title>
+    <style>
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          color: white;
+          background-color: black;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .split {
+          height: 100%;
+          width: 50%;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          overflow-x: hidden;
+          padding-top: 20px;
+        }
+        
+        .left {
+          left: 0;
+        }
+        
+        .right {
+          right: 0;
+        }
+        
+        .centered {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .logo {
+          width: 450px;
+          transition: ease-in-out 0.2s;
+        }
+
+        .logo:hover {
+          width: 550px;
+        }
+    </style>
 </head>
-<style>
-    body {
-        background-color: black;
-        color: white;
-        width: 100%;
-        overflow: hidden;
-        margin: auto;
-    }
-    div {
-        font-size: 1.6rem;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        text-align: center;
-        height: 100vh;
-    }
-    img {
-        position: absolute;
-        display: inline;
-        width: 200px;
-        top: 2vh;
-        left: 1.5vw;
-    }
-</style>
 <body>
-    <a href="https://ranchomiragelibrary.org"><img src="/logo.png"></a>
-    <div id="app"></div>
+  <div class="split left">
+    <a href="https://ranchomirageca.gov">
+        <div class="centered">   
+          <img class="logo" src="rmchlogo.png">
+        </div>
+    </a>
+    </div>    
+    <div class="split right">
+    <a href="https://ranchomiragelibrary.org">
+        <div class="centered">
+          <img class="logo" src="rmlologo.png">
+        </div>
+    </a>
+    </div>            
 </body>
-<script>
-
-    var app = document.getElementById('app');
-
-    var typewriter = new Typewriter(app, {
-        loop: false
-    });
-
-    var theWord= [
-        'Traveler',
-        'Writer',
-        'Reader',
-        'Adventurer',
-        'Artist'
-        ];
-  
-    var wordNum = Math.floor(Math.random() * theWord.length);
-    theWord[wordNum]
-    typewriter
-        .typeString('Hello ')
-        .typeString(theWord[wordNum])
-        .typeString('...')
-        .pauseFor(2500)
-        .typeString(' Bye!')
-        .start();
-
-    setTimeout(function () {
-        window.location.href = "https://ranchomirage.aspendiscovery.org/"; //will redirect to your page
-        }, 6250); //will call the function after 2 secs.
-
-</script>
 </html>

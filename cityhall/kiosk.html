@@ -7,8 +7,11 @@
     <title>Rancho Mirage CSS Kiosk</title>
     <style>
         body {
-          font-family: Arial;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           color: white;
+          background-image: url(bg.png);
+          background-repeat: no-repeat;
+          background-size: cover;
         }
         
         a {
@@ -28,12 +31,10 @@
         
         .left {
           left: 0;
-          background-color: blue;
         }
         
         .right {
           right: 0;
-          background-color: red;
         }
         
         .centered {
@@ -44,31 +45,45 @@
           text-align: center;
           border: 3px solid black;
           border-radius: 10px;
-          padding: 50px;
+          padding: 100px;
           background-color: white;
-          color: black
+          color: black;
+          transition: ease-in-out 0.2s;
+          width: 550px;
+          
         }
-        
-        .centered img {
-          width: 150px;
-          border-radius: 50%;
+
+        .centered:hover {
+          padding: 125px;
+        }
+
+        .logo img {
+          width: 250px;
+          z-index: 999;
+          position: absolute;
+          left: 50%;
+          top: 10%;
+          transform: translate(-50%, -50%);
         }
     </style>
 </head>
 <body>
+  <div class="logo">
+    <img src="logo.png">
+  </div>
   <div class="split left">
     <a href="https://ranchomirageca-energovweb.tylerhost.net/apps/selfservice#/home">
         <div class="centered">   
-        <h2>Citizen Self Service</h2>
-        <p>Click here to fill out or track a permit, plan, or license.</p>
+        <h1>Citizen Self Service</h1>
+        <h3>Click here to fill out or track a permit, plan, or license.</h3>
         </div>
     </a>
     </div>    
     <div class="split right">
     <a href="https://ranchomirageca.justfoia.com/publicportal/home/newrequest">
         <div class="centered">
-        <h2>Public Record Request</h2>
-        <p>Click here to fill out or track a public record request.</p>
+        <h1>Public Record Request</h1>
+        <h3>Click here to fill out or track a public record request.</h3>
         </div>
     </a>
     </div>            

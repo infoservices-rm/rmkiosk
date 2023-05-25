@@ -1,6 +1,6 @@
 connection=wifi
 dhcp=yes
-ssid_name=RMLO-PUBLIC
+ssid_name=RanchoPublic
 browser=firefox
 kiosk_config=http://rmkiosk.netlify.app/cityhall/kiosk-config.txt
 touchscreen_calibration="Weida Hi-Tech CoolTouchR System " "libinput Calibration Matrix" 1.003138 0.001046 -0.001962 0.003101 1.001868 -0.002716 0.000000 0.000000 1.000000 

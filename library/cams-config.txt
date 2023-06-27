@@ -1,0 +1,16 @@
+connection=wifi
+dhcp=yes
+ssid_name=RanchoData
+wifi_encryption=wpa
+wpa_password=S3cur3D@T@@CORM
+browser=firefox
+kiosk_config=https://infoservices-rm.github.io/rmkiosk/library/cams-config.txt
+homepage_check=Cameras Not Available - Contact Information Services
+homepage=http://lib-docker/cams.html
+session_idle_forced=15
+session_idle_action=restart
+disable_navigation_bar=yes
+timezone=America/Los_Angeles
+additional_components=uefi.zip
+wallpaper=https://infoservices-rm.github.io/rmkiosk/library/wallpaper.png
+shutdown_menu=shutdown reboot restart-session
